@@ -14,7 +14,6 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -52,30 +51,30 @@ Users should be able to:
 
 ### What I learned
 
-I learned a lot with this project. especially that the best way to calculate between two date in JavaScript is to convert your dates in timestamp. then all you have to do is calculate the difference and substract the default date. 
+I learned a lot with this project. especially that the best way to calculate between two date in JavaScript is to convert your dates in timestamp. then all you have to do is calculate the difference and substract the default date.
 
 ```js
-function calcDate(date1, date2){
+function calcDate(date1, date2) {
   // Transform the 2 dates to obtain the timestamps
   const date1_time_stamp = date1?.getTime();
   const date2_time_stamp = date2.getTime();
   // Calculate the difference
   const calc = new Date(date2_time_stamp - date1_time_stamp);
   // Retrieve the date, month and year
-  const calcFormatTmp = calc.getDate() + '-' + (calc.getMonth() + 1) + '-' + calc.getFullYear();
+  const calcFormatTmp =
+    calc.getDate() + "-" + (calc.getMonth() + 1) + "-" + calc.getFullYear();
   // Convert to an array and store
   const calcFormat = calcFormatTmp.split("-");
   // Subtract each member of our array from the default date
   const days_passed = Number(Math.abs(calcFormat[0]) - 1);
   const months_passed = Number(Math.abs(calcFormat[1]) - 1);
   const years_passed = Number(Math.abs(calcFormat[2]) - 1970);
-  return [days_passed, months_passed+1, years_passed]
+  return [days_passed, months_passed + 1, years_passed];
 }
 ```
 
 ### Useful resources
 
-<!-- - [Use animate number package](https://www.npmjs.com/package/use-animate-number) - This package is great to animate your number. -->
 - [Calculate the Difference Between Two Dates in JavaScript](https://blog.bitsrc.io/calculate-the-difference-between-two-2-dates-e1d76737c05a) - This article is really great to help you build a function that will calculate the difference between the birthday and now.
 
 ## Author
