@@ -1,0 +1,54 @@
+.button{
+    position: absolute;
+    top:0;
+    right: 0;
+    box-sizing: border-box;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--color-primary);
+    transition: all .4s;
+    @media only screen and (max-width: 800px) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @media only screen and (max-width: 570px) {
+          width: 5rem;
+          height: 5rem;
+          
+        }
+        @media only screen and (max-width: 410px) {
+          width: 4rem;
+          height: 4rem;
+    
+      }
+      img{
+        @media only screen and (max-width: 570px) {
+            width: 2rem;
+            height: 2rem;
+        }
+      }
+    &:hover{
+        cursor: pointer;
+        background-color: var(--color-grey-dark);
+
+    }
+    &__group{
+        width: 100%;
+        position: relative;
+        hr{
+            border-top: .1px solid var(--color-grey);
+            margin: 3.125rem 0;
+            @media only screen and (max-width: 800px) {
+                margin: 7rem 0;
+                
+            }
+            @media only screen and (max-width: 570px) {
+                  margin: 4rem 0;
+    
+              }
+        }
+    }
+}

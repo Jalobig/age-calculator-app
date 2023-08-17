@@ -1,0 +1,20 @@
+.card {
+  box-sizing: border-box;
+  max-width: 52.5rem;
+  margin: 9.375rem auto;
+  padding: 4.0625rem;
+  background-color: var(--color-white-dark);
+  border-radius: 1rem;
+  border-bottom-right-radius: 15rem;
+  @media only screen and (max-width: 800px) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 570px) {
+        padding: 1.5625rem;
+        border-bottom-right-radius: 10rem;
+    }
+    @media only screen and (max-width: 410px) {
+      border-bottom-right-radius: 7rem;
+    
+  }
+}
