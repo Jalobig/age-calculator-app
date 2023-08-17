@@ -1,4 +1,16 @@
+@keyframes fade-in-top {
+  0%{
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
+  animation: fade-in-top 1s backwards;
   box-sizing: border-box;
   max-width: 52.5rem;
   margin: 9.375rem auto;
