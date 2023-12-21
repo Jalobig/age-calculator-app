@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Result.module.scss";
+import AnimatedNumbers from "react-animated-numbers";
 
 const Result = (props) => {
-
   function calcDate(date1, date2) {
     const date1_time_stamp = date1?.getTime();
     const date2_time_stamp = date2.getTime();
@@ -30,18 +30,37 @@ const Result = (props) => {
 
   return (
     <div className={classes.result}>
-      <h1 className={classes.result__text}>
-        <span>{year === undefined ? "- -" : difference[2]}</span>{" "}
-        {difference[2] === 1 ? "year" : "years"}
-      </h1>
-      <h1 className={classes.result__text}>
-        <span>{month === undefined ? "- -" : difference[1]}</span>{" "}
-        {difference[1] === 1 ? "month" : "months"}
-      </h1>
-      <h1 className={classes.result__text}>
-        <span>{day === undefined ? "- -" : difference[0]}</span>{" "}
-        {difference[0] === 1 ? "day" : "days"}
-      </h1>
+      <div className={classes.result__row}>
+        <h1 className={classes["result__text--num"]}>
+          {year === undefined ? (
+            "- -"
+          ) : (
+            <AnimatedNumbers animateToNumber={difference[2]} />
+          )}
+          </h1>
+          <h1 className={classes.result__text}>{difference[2] === 1 ? "year" : "years"}</h1>
+      </div>
+      <div className={classes.result__row}>
+        <h1 className={classes["result__text--num"]}>
+          {month === undefined ? (
+            "- -"
+          ) : (
+            <AnimatedNumbers animateToNumber={difference[1]} />
+          )}
+          </h1>
+          <h1 className={classes.result__text}>{difference[1] === 1 ? "month" : "months"}</h1>
+      </div>
+      <div className={classes.result__row}>
+        <h1 className={classes["result__text--num"]}>
+          {day === undefined ? (
+            "- -"
+          ) : (
+            <AnimatedNumbers animateToNumber={difference[0]} />
+          )}
+          </h1>
+          <h1 className={classes.result__text}>{difference[0] === 1 ? "day" : "days"}</h1>
+      </div>
+      
     </div>
   );
 };

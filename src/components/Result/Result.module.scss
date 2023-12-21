@@ -1,4 +1,8 @@
 .result {
+  &__row{
+    display: flex;
+  }
+  &__text--num,
   &__text {
     margin: 0;
     color: var(--color-grey-dark);
@@ -16,6 +20,12 @@
     }
     span {
       color: var(--color-primary);
+      // display: flex;
+      // flex-direction: row;
     }
+  }
+  &__text--num{
+    color: var(--color-primary);
+    margin-right: 1rem;
   }
 }
